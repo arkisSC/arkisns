@@ -42,7 +42,7 @@ var background = function (window) {
            
             // TODO: 3 - Add a moon and starfield
    
-            for (var starAmount = 0; starAmount < 100; starAmount++) {
+            for (var starAmount = 0; starAmount < 50; starAmount++) {
                 var circle = draw.circle(10, "green", "LightGray", 2);
                 circle.x = canvasWidth * Math.random();
                 circle.y = groundY * Math.random();
@@ -51,14 +51,14 @@ var background = function (window) {
             var moon = draw.bitmap("img/moon.png");
             moon.x = 1500;
             moon.y = 50;
-            moon.scaleX = 0.5;
-            moon.scaleY = 0.5;
+            moon.scaleX = 0.2;
+            moon.scaleY = 0.2;
             background.addChild(moon);          
            
             // TODO 5: Part 1 - Add buildings!     Q: This is before TODO 4 for a reason! Why?
             for (var i = 0; i < 26; ++i) {
-                var buildingHeight = (Math.random() * 300) + 50;
-                var building  = draw.rect(75, buildingHeight, "Yellow", "Black", 1);
+                var buildingHeight = (Math.random() * 200) + 50;
+                var building  = draw.rect(75, buildingHeight, "Blue", "Black", 1);
                 building.x = 75 * i;
                 building.y = groundY - buildingHeight;
                 background.addChild(building);
